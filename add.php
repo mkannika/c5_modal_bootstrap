@@ -1,4 +1,4 @@
-<?php defined('C5_EXECUTE') or die(_("Access Denied."))
+<?php defined('C5_EXECUTE') or die(_("Access Denied.")) ?>
 
 <div class="ccm-ui">
 
@@ -14,7 +14,7 @@
 
 	<div class="ccm-block-field-group">
 		<label>Content (Require)</label>
-		<?php echo $form->textarea('content', array('class'=>'advancedEditor ccm-advanced-editor')) ?>
+		<textarea name="content" rows="8" cols="80" class="advancedEditor ccm-advanced-editor"></textarea>
 	</div>
 
 </div>
