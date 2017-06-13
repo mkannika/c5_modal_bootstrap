@@ -1,22 +1,18 @@
 <?php defined('C5_EXECUTE') or die(_("Access Denied.")) ?>
 
-<?php $aObj=$controller; ?>
-<div class="ccm-ui">
-	<div class="ccm-block-field-group">
-		<label for="">Title</label>
-    <input type="text" name="title" value="<?php echo $aObj->title; ?>">
-	</div>
+<?php $modalObj=$controller; ?>
 
-  <div class="ccm-block-field-group">
-		<label for="">Show/Hide</label>
-    <select name="status">
-			<option value="0"<?php echo $aObj->status == 0 ? ' selected="selected" ' : ''?>><?php  echo t('Hide')?></option>
-      <option value="1"<?php echo $aObj->status == 1 ? ' selected="selected" ' : ''?>><?php echo t('Show')?></option>
-    </select>
-	</div>
+<div class="ccm-block-field-group">
+	<label>Text button (Require)</label>
+	<input type="text" name="text" value="<?php echo $modalObj->text; ?>">
+</div>
 
-	<div class="ccm-block-field-group">
-    <label for="">Content</label>
-    <textarea name="content" style="width:95%;height: 200px;resize:none;"><?php echo $aObj->content; ?></textarea>
-	</div>
+<div class="ccm-block-field-group">
+	<label>Header (Optional) <em>It will not show if you let it empty</em></label>
+	<input type="text" name="heading" value="<?php echo $modalObj->heading;?>" placeholder="Modal Heading">
+</div>
+
+<div class="ccm-block-field-group">
+	<label>Content (Require)</label>
+	<textarea id="ccm-content-<?php echo $a->getAreaID()?>" class="advancedEditor ccm-advanced-editor" name="content" style="width: 580px; height: 380px"><?php echo $modalObj->content; ?></textarea>
 </div>

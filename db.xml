@@ -5,9 +5,12 @@
 			<key />
 			<unsigned />
 		</field>
-		<field name="title" type="X2"></field>
-		<field name="status" type="I">
-				<default value="0" />
+		<field name="text" type="X2">
+			
+		</field>
+		<field name="heading" type="X2">
+		</field>
+		<field name="content" type="X2">
 		</field>
 	</table>
 </schema>
