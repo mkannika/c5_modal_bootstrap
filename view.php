@@ -1,7 +1,40 @@
 <?php defined('C5_EXECUTE') or die(_("Access Denied.")) ?>
 
 <!-- Button to trigger modal -->
-<a href="#modal-<?php echo $bID; ?>" role="button" class="btn" data-toggle="modal"><?php echo $text; ?></a>
+<?php
+  $btnClass = "";
+
+  if($style == 0){
+
+    $btnClass = '';
+
+  }else if($style == 1){
+
+    $btnClass = 'btn-primary';
+
+  }else if($style == 2){
+
+    $btnClass = 'btn-info';
+
+  }else if($style == 3){
+
+    $btnClass = 'btn-success';
+
+  }else if($style == 4){
+
+    $btnClass = 'btn-warning';
+
+  }else if($style == 5){
+
+    $btnClass = 'btn-danger';
+
+  }else if($style == 5){
+
+    $btnClass = 'btn-inverse';
+
+  }
+?>
+<a href="#modal-<?php echo $bID; ?>" role="button" class="btn <?php echo $btnClass; ?>" data-toggle="modal"><?php echo $text; ?></a>
 
 <!-- Modal -->
 <div id="modal-<?php echo $bID; ?>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel-<?php echo $bID; ?>" aria-hidden="true">
@@ -18,6 +51,7 @@
   </div>
 
   <div class="modal-footer">
+
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
     <button class="btn btn-primary">Save changes</button>
   </div>
