@@ -9,14 +9,14 @@
 
 	<div class="ccm-block-field-group">
 		<label>Button Style</label>
-		<select class="" name="style">
-			<option value="0">Default</option>
-			<option value="1">Primary</option>
-			<option value="2">Info</option>
-			<option value="3">Success</option>
-			<option value="4">Warning</option>
-			<option value="5">Danger</option>
-			<option value="6">Inverse</option>
+		<select name="style">
+			<option value="">Default</option>
+			<option value="btn-primary">Primary</option>
+			<option value="btn-info">Info</option>
+			<option value="btn-success">Success</option>
+			<option value="btn-warning">Warning</option>
+			<option value="btn-danger">Danger</option>
+			<option value="btn-inverse">Inverse</option>
 		</select>
 	</div>
 

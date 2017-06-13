@@ -10,13 +10,13 @@
 <div class="ccm-block-field-group">
 	<label>Button Style</label>
 	<select name="style">
-		<option value="0" <?php echo $modalObj->style == 0 ? ' selected="selected" ' : ''?>>Default</option>
-		<option value="1" <?php echo $modalObj->style == 1 ? ' selected="selected" ' : ''?>>Primary</option>
-		<option value="2" <?php echo $modalObj->style == 2 ? ' selected="selected" ' : ''?>>Info</option>
-		<option value="3" <?php echo $modalObj->style == 3 ? ' selected="selected" ' : ''?>>Success</option>
-		<option value="4" <?php echo $modalObj->style == 4 ? ' selected="selected" ' : ''?>>Warning</option>
-		<option value="5" <?php echo $modalObj->style == 5 ? ' selected="selected" ' : ''?>>Danger</option>
-		<option value="6" <?php echo $modalObj->style == 6 ? ' selected="selected" ' : ''?>>Inverse</option>
+		<option value="" <?php echo $modalObj->style == 0 ? ' selected="selected" ' : ''?>>Default</option>
+		<option value="btn-primary" <?php echo $modalObj->style == 1 ? ' selected="selected" ' : ''?>>Primary</option>
+		<option value="btn-info" <?php echo $modalObj->style == 2 ? ' selected="selected" ' : ''?>>Info</option>
+		<option value="btn-success" <?php echo $modalObj->style == 3 ? ' selected="selected" ' : ''?>>Success</option>
+		<option value="btn-warning" <?php echo $modalObj->style == 4 ? ' selected="selected" ' : ''?>>Warning</option>
+		<option value="btn-danger" <?php echo $modalObj->style == 5 ? ' selected="selected" ' : ''?>>Danger</option>
+		<option value="btn-inverse" <?php echo $modalObj->style == 6 ? ' selected="selected" ' : ''?>>Inverse</option>
 	</select>
 </div>
 
