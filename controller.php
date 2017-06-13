@@ -13,4 +13,16 @@ class ModalBootstrapBlockController extends BlockController {
 	public function getBlockTypeDescription() {
 		return t('Create an modal block with the Bootstrap framework.');
 	}
+
+	public function add (){
+		$this->addHeaderItem(Loader::helper('html')->javascript('tiny_mce/tiny_mce.js'));
+		Loader::element('editor_init');
+		Loader::element('editor_config', array('editor_mode' => 'ADVANCED'));
+	}
+
+	public function edit() {
+		
+	}
+
+
 }

@@ -1,4 +1,8 @@
-<?php defined('C5_EXECUTE') or die(_("Access Denied.")) ?>
+<?php defined('C5_EXECUTE') or die(_("Access Denied."));
+
+$this->addHeaderItem(Loader::helper('html')->javascript('tiny_mce/tiny_mce.js'));
+Loader::element('editor_init');
+Loader::element('editor_config', array('editor_mode' => 'ADVANCED')); ?>
 
 <?php $modalObj=$controller; ?>
 
@@ -14,5 +18,5 @@
 
 <div class="ccm-block-field-group">
 	<label>Content (Require)</label>
-	<textarea id="ccm-content-<?php echo $a->getAreaID()?>" class="advancedEditor ccm-advanced-editor" name="content" style="width: 580px; height: 380px"><?php echo $modalObj->content; ?></textarea>
+	<?php echo $form->textarea('content', $content, array('class'=>'advancedEditor ccm-advanced-editor')) ?>
 </div>
