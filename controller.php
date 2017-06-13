@@ -21,7 +21,9 @@ class ModalBootstrapBlockController extends BlockController {
 	}
 
 	public function edit() {
-		
+		$this->addHeaderItem(Loader::helper('html')->javascript('tiny_mce/tiny_mce.js'));
+		Loader::element('editor_init');
+		Loader::element('editor_config', array('editor_mode' => 'ADVANCED'));		
 	}
 
 
