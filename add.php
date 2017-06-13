@@ -1,21 +1,20 @@
-<?php defined('C5_EXECUTE') or die(_("Access Denied.")) ?>
+<?php defined('C5_EXECUTE') or die(_("Access Denied."))
+$bt->inc('editor_init.php'); ?>
+
 <div class="ccm-ui">
 	<div class="ccm-block-field-group">
-		<label for="">Title</label>
-    <input type="text" name="title" value="">
-	</div>
-
-  <div class="ccm-block-field-group">
-		<label for="">Show/Hide</label>
-    <select name="status">
-			<option value="0"><?php echo t('Hide')?></option>
-      <option value="1"><?php echo t('Show')?></option>
-    </select>
+		<label>Text button</label>
+    <input type="text" name="text" value="">
 	</div>
 
 	<div class="ccm-block-field-group">
-    <label for="">Content</label>
-    <textarea name="content" style="width:95%;height: 200px;resize:none;"></textarea>
+		<label>Header</label>
+		<input type="text" name="heading" value="" placeholder="Modal Heading">
+	</div>
+
+	<div class="ccm-block-field-group">
+		<label>Content</label>
+		<textarea id="ccm-content-<?php echo $a->getAreaID()?>" class="advancedEditor ccm-advanced-editor" name="content" style="width: 580px; height: 380px"></textarea>
 	</div>
 
 </div>

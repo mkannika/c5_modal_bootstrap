@@ -1,14 +1,19 @@
 <?php defined('C5_EXECUTE') or die(_("Access Denied.")) ?>
 
-<div class="accordion-group">
-  <div class="accordion-heading">
-    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<?php echo $bID; ?>">
-      <?php echo $title; ?>
-    </a>
+<!-- Button to trigger modal -->
+<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Modal header</h3>
   </div>
-  <div id="collapse<?php echo $bID; ?>" class="accordion-body collapse <?php if($status == 1) { echo 'in'; } ?>">
-    <div class="accordion-inner">
-      <?php echo $content; ?>
-    </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Save changes</button>
   </div>
 </div>
